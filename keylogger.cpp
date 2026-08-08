@@ -54,7 +54,8 @@ int main(){
                         } else {
                             key_history = key_history + c;
                         }
-                        std::cout << key_history << std::endl;
+                        
+                        std::cout << "\033[2K\r" << key_history << std::flush;
                     }
                 } else {
                     was_key_down[key] = false;
