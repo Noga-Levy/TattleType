@@ -8,21 +8,21 @@
 
 By imitating real keyloggers, TattleType--an educational, non-malicious keylogger--answers just that. 
 
-Rather than inspiring paranoia, TattleType employs a playful twist to keep the experience light-hearted--whenever it detects sensitive information (e.g, gmail addresses), it notifies the user with a windows-popup describing a new achievement. For example,
+Rather than inspiring paranoia, TattleType employs a playful twist to keep the experience light-hearted--whenever it detects sensitive information (e.g, gmail addresses), it notifies the user with a Windows pop-up describing a new achievement. For example, when "@gmail.com" is detected, it sends
 
 <p align="center">
 	<img src="https://github.com/Noga-Levy/TattleType/blob/main/Assets/example_notification.png">
 </p>
 
-In this way, users become more aware of what information they share with their device without suffering the stress caused most cyber-awareness applications.
+Via these pop-ups, users become more aware of what information they share with their device without suffering the stress caused by most cyber-awareness applications.
 
 ## User Interaction
 
-Once running, the program will listen to all key presses made by the user. When specific "triggers" are detected, a Windows popup will appear--all the user has to do at that point is read it and press "OK" to continue.
+Once running, the program listens to all of the user's key presses. When specific "triggers" are detected, a Windows pop-up will appear--all the user has to do at that point is read it and press "OK" to continue.
 
 ## Installation
 ### Download `.exe` file -- *CURRENTLY UNAVAILABLE*
-WHEN AVAILABLE, head over to the [Releases page](https://github.com/Noga-Levy/TattleType/releases/), and download the `.exe` file from the most recent release.  Run the `.exe` file to start the program.
+WHEN AVAILABLE, head over to the [Releases page](https://github.com/Noga-Levy/TattleType/releases/) and download the `.exe` file from the most recent release.  Run the `.exe` file to start the program.
 
 ### Build from source
 Alternatively, clone the repository and compile `functions.h`, `identify_keys.cpp`, and `keylogger.cpp` into one executable:
