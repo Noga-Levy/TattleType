@@ -11,7 +11,7 @@ By imitating real keyloggers, TattleType--an educational, non-malicious keylogge
 Rather than inspiring paranoia, TattleType employs a playful twist to keep the experience light-hearted--whenever it detects sensitive information (e.g, gmail addresses), it notifies the user with a windows-popup describing a new achievement. For example,
 
 <p align="center">
-	<img src="https://github.com/Noga-Levy/TattleType/blob/master/Assets/example_notification.png">
+	<img src="https://github.com/Noga-Levy/TattleType/blob/main/Assets/example_notification.png">
 </p>
 
 In this way, users become more aware of what information they share with their device without suffering the stress caused most cyber-awareness applications.
