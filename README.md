@@ -27,6 +27,7 @@ Once running, the program listens to all of the user's key presses. When specifi
 | 42 | The Secret | I see you've found the secret to the universe. Now I know it too! |
 | bank of america | USD Sniffer | Heyyy... so I noticed you're typing something about the bank of america... do you think maybe you could spare a dime for a poor, out-of-luck program, such as myself? |
 | password123 | A commoner | You're still using password123 as your password? Yikes! |
+| **Escape Key** | **N/A -- ends program** | **N/A -- ends program** |
 
 ## Installation
 ### Download `.exe` file -- _WINDOWS ONLY_
