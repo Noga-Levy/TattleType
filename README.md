@@ -22,7 +22,7 @@ Once running, the program listens to all of the user's key presses. When specifi
 
 ## Installation
 ### Download `.exe` file
-WHEN AVAILABLE, head over to the [Releases page](https://github.com/Noga-Levy/TattleType/releases/) and download the `.exe` file from the most recent release.  Run the `.exe` file to start the program.
+Head over to the [Releases page](https://github.com/Noga-Levy/TattleType/releases/) and download the `.exe` file from the most recent release.  Run the `.exe` file to start the program.
 
 ### Build from source
 Alternatively, clone the repository and compile `functions.h`, `send_notification.cpp`, `keylogger.cpp`, and `main.cpp`--all from the `Scripts` folder--into one executable:
