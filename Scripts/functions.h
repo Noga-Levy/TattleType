@@ -1,7 +1,7 @@
 /*
 Written in August of 2026 by Noga Levy.
 
-functions.h is the blueprint for all functions used accross multiple functions
+functions.h is the blueprint for all functions that are used accross multiple files
 */
 
 #include <string>
@@ -10,4 +10,4 @@ functions.h is the blueprint for all functions used accross multiple functions
 #pragma once
 
 std::string keylogger(std::string &key_history, std::unordered_map<int, int> &was_key_down);
-int send_notification(std::string trigger_word, bool &already_triggered, std::string log, std::string msg);
+int send_notification(std::string trigger_word, bool &already_triggered, std::string log, std::string msg, bool is_regex = false);

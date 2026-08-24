@@ -18,6 +18,14 @@ std::string keylog = " ";
 std::unordered_map<int, int> key_press_map;
 
 bool gmail_triggered = false;
+bool phone_num_triggered = false;
+
+
+std::unordered_map<std::string, std::string> achievements = {{"@gmail.com", "Business Man"}, {"phone", "Cold Caller"}};
+std::unordered_map<std::string, std::string> description = {
+    {"@gmail.com", "Had I been malicious, I probably would have sold the gmail you just typed in a massive dataset. But since I'm not, all the best from your local keylogger!"},
+    {"phone", "Heyo, I just found a phone number! Beware of what you share--I hope that's not your boss, because I'm tempted give them a call..."}
+};
 
 int main(){
     // Initizializing unordered map
@@ -34,6 +42,10 @@ int main(){
             return 0;
         }
 
-        send_notification("@gmail.com", gmail_triggered, keylog, "Achievement: Business Man.\nMaiiiilll, the mail is overwhelming--");
+        
+        send_notification("@gmail.com", gmail_triggered, keylog, ("Achievement: " + achievements["@gmail.com"] + ".\n" + description["@gmail.com"]));
+        send_notification(R"(\(?[0-9]{3}\)?[ -][0-9]{3}[ -][0-9]{4})", phone_num_triggered, keylog, ("Achievement: " + achievements["phone"] + ".\n" + description["phone"]), true);
     }
+
+    return 0;
 }

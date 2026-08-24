@@ -1,7 +1,7 @@
 /*
 Written in August of 2026 by Noga Levy.
 
-For a given string, identify_keys.cpp monitors looks keywords and send a notification to the user when one is found.
+For a given string, identify_keys.cpp monitors for keywords and send a notification to the user when one is found.
 */
 
 #include <iostream>
@@ -9,11 +9,22 @@ For a given string, identify_keys.cpp monitors looks keywords and send a notific
 #include <string>
 #include <windows.h>
 #include <unordered_map>
+#include <regex>
 #include "functions.h"
 
 
-int send_notification(std::string trigger_word, bool &already_triggered, std::string log, std::string msg){
-    if (log.find(trigger_word) != std::string::npos){
+int send_notification(std::string trigger_word, bool &already_triggered, std::string log, std::string msg, bool is_regex){
+    bool found;
+
+    if (is_regex){
+        found = std::regex_search(log, std::regex(trigger_word));
+    } else if (log.find(trigger_word) != std::string::npos){
+        found = true;
+    } else {
+        found = false;
+    }
+    
+    if (found){
         if (already_triggered == false){
             already_triggered = true;
             
