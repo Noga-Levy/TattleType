@@ -18,7 +18,15 @@ Via these pop-ups, users become more aware of what information they share with t
 
 ## User Interaction
 
-Once running, the program listens to all of the user's key presses. When specific "triggers" are detected, a Windows pop-up will appear--all the user has to do at that point is read it and press "OK" to continue.
+Once running, the program listens to all of the user's key presses. When specific "triggers" are detected, a Windows pop-up will appear--all the user has to do at that point is read it and press "OK" to continue. All triggers and their response, as of the last release:
+
+| Trigger | Achievement Title | Description |
+| -------- | -------- | -------- |
+| @gmail.com | Business Man | Had I been malicious, I probably would have sold the gmail you just typed in a massive dataset. But since I'm not, all the best from your local keylogger! |
+| Phone number (determined from a regex) | Cold Caller | Heyo, I just found a phone number! Beware of what you share--I hope that's not your boss, because I'm tempted give them a call... |
+| 42 | The Secret | I see you've found the secret to the universe. Now I know it too! |
+| bank of america | USD Sniffer | Heyyy... so I noticed you're typing something about the bank of america... do you think maybe you could spare a dime for a poor, out-of-luck program, such as myself? |
+| password123 | A commoner | You're still using password123 as your password? Yikes! |
 
 ## Installation
 ### Download `.exe` file -- _WINDOWS ONLY_
