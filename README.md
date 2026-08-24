@@ -31,7 +31,7 @@ Alternatively, clone the repository and compile `functions.h`, `send_notificatio
 git clone https://github.com/Noga-Levy/TattleType
 
 cd TattleType/Scripts
-g++ functions.h main.cpp send_notification.cpp keylogger.cpp -o test
+g++ functions.h main.cpp send_notification.cpp keylogger.cpp -o TattleType
 ```
 
 ## Project Structure
