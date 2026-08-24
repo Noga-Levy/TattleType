@@ -21,7 +21,7 @@ Via these pop-ups, users become more aware of what information they share with t
 Once running, the program listens to all of the user's key presses. When specific "triggers" are detected, a Windows pop-up will appear--all the user has to do at that point is read it and press "OK" to continue.
 
 ## Installation
-### Download `.exe` file
+### Download `.exe` file -- _WINDOWS ONLY_
 Head over to the [Releases page](https://github.com/Noga-Levy/TattleType/releases/) and download the `.exe` file from the most recent release.  Run the `.exe` file to start the program.
 
 ### Build from source
